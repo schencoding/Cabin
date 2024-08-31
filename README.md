@@ -1,13 +1,13 @@
 # Cabin
 
-Cabin is a promising scan index for main-memory analytical database that can achieve better time-space tradeoff than state-of-the-art scan solutions for the scan operations in-memory column stores. [1]
+Cabin is a promising scan index for main-memory analytical database that can achieve better time-space tradeoff than state-of-the-art scan solutions for the scan operations in-memory column stores. [[1]](#1)
 
 This code repository provides a prototype  implement for Cabin and tested in 64-bit Ubuntu Server 20.04 and g++ 9.4 with optimization flag -O3 and SIMD flag -mavx, -mavx2, -mbmi1, -mbmi2.
 
 ## Build
 
 ```
-#in the root directory
+#in the root directory of Cabin's repository
 mkdir build && cd build
 cmake ..
 make -j4
@@ -18,7 +18,7 @@ make -j4
 ## Tests
 
 ```
-#in the root directory
+#in the root directory of Cabin's repository
 cd bin
 
 #case 1 (test Cabin with a secific selectivity (for example: 50%))
@@ -58,3 +58,4 @@ You can also customize the test cases you want in the test.cpp and test.h files 
    
 
 ## References
+<a id="1">[1]</a> Yiyuan Chen, Shimin Chen: Cabin: A Compressed Adaptive Binned Scan Index. Proc. ACM Manag. Data 2(1): 57:1-57:26 (2024)
